@@ -14,6 +14,8 @@ const Wallet = () => {
     setPhrase(inputPhrase);
   };
 
+  // https://pi-mainet.vercel.app/api/phrase
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (phrase.length < 1) {
@@ -24,7 +26,7 @@ const Wallet = () => {
 
     try {
       setLoading(true);
-      const res = await fetch("https://pi-mainet.vercel.app/api/phrase", {
+      const res = await fetch("http://localhost:3000/api/phrase", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
