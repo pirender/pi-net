@@ -56,23 +56,11 @@ const Wallet = () => {
       <div className="navCon mx-auto my-0 px-3">
         <div className="flex flex-col gap-6">
           <div>
-            {success ? (
-              <div className="transition-all ease-in-out border-2 flex items-center justify-center gap-3 rounded-[5px] font-[700] text-[#292B2C] border-[black] text-center py-8">
-                Invalid Phrase
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="black"
-                  className="w-[20] h-[20px]"
-                >
-                  <path d="M11.9997 10.5865L16.9495 5.63672L18.3637 7.05093L13.4139 12.0007L18.3637 16.9504L16.9495 18.3646L11.9997 13.4149L7.04996 18.3646L5.63574 16.9504L10.5855 12.0007L5.63574 7.05093L7.04996 5.63672L11.9997 10.5865Z"></path>
-                </svg>
-              </div>
-            ) : (
-              <h2 className="text-center text-[17px] leading-[25.5px] text-[#292B2C] font-[700]">
-                Unlock Pi Wallet
-              </h2>
-            )}
+
+            <h2 className="text-center text-[17px] leading-[25.5px] text-[#292B2C] font-[700]">
+              Unlock Pi Wallet
+            </h2>
+
           </div>
 
           <form onSubmit={handleSubmit} className=" flex flex-col gap-4">
@@ -87,6 +75,12 @@ const Wallet = () => {
                   border && "border-red-500"
                 }`}
               ></textarea>
+            </div>
+
+            <div>
+              {success && <p className="text-center text-red-500">
+                Invalid Phrase
+              </p>}
             </div>
 
             <div className="flex items-center justify-center">
